@@ -8,3 +8,5 @@ conflict resolve success
 
 20170820
 测试与原作者的代码同步
+
+冲突已解决，测试成功
