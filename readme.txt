@@ -10,3 +10,5 @@ conflict resolve success
 测试与原作者的代码同步
 
 代码同步测试成功
+
+冲突测试
