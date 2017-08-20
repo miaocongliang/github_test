@@ -7,3 +7,4 @@ conflict test
 conflict resolve success
 
 20170820
+测试与原作者的代码同步
