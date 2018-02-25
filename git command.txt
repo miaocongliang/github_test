@@ -17,7 +17,8 @@ git 代码提交步骤如下：
 3、 git add .   //（.）点表示当前目录下的所有内容，交给git管理，也就是提交到了git的本地仓库。
     Ps:git的强大之处就是有一个本地仓库的概念，在没有网络的情况下可以先将更新的内容提交到本地仓库。
 
-4、git commit -m '提交时的说明信息'
+4、git commit -m '备注'
    git commit -a 提交所有修改的代码
 
 5、git push origin master // 上传本地指定分支到远程仓库 git push [remote] [branch]
+   这一步才是推送代码推送时需要跟分支名，表示需要将代码推送至某个分支.如git push origin master 表示你要将代码推送至master分支。
