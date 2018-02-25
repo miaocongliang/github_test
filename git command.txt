@@ -1,4 +1,29 @@
+上传代码到git的步骤：
+首先需要在github上新建远程仓库，然后按照以下步骤上传
+1、cd到你的本地项目根目录下，执行如下git命令
 
+2、git init
+
+3、git add .
+
+4、git commit -m "注释语句"
+
+5、git remote add origin https://自己的仓库url地址
+
+6、git pull origin master
+
+7、git push -u origin master
+
+
+
+创建分支并切换到新的分支：
+  git checkout -b dev
+  此时提交时需要用以下命令
+  git push origin dev
+  
+  git checkout dev 切换到本地dev分支
+
+以上参考：https://www.cnblogs.com/mantou811/p/6688517.html
 
 git的分为以下几个文件区域：
 1、Workspace：工作区
