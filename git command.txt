@@ -1,6 +1,7 @@
-上传代码到git的步骤：
+一、上传代码到git的步骤：
+
 首先需要在github上新建远程仓库，然后按照以下步骤上传
-1、cd到你的本地项目根目录下，执行如下git命令
+1、cd到你的本地项目根目录下 cd /d/github/test ，执行如下git命令
 
 2、git init
 
@@ -16,7 +17,7 @@
 
 
 
-创建分支并切换到新的分支：
+二、创建分支并切换到新的分支：
   git checkout -b dev
   此时提交时需要用以下命令
   git push origin dev
@@ -25,16 +26,52 @@
 
 以上参考：https://www.cnblogs.com/mantou811/p/6688517.html
 
-git的分为以下几个文件区域：
+
+三、从github上获取项目
+   1、cd到工作目录：/d/github/20170703
+   2、拉取项目：git clone https://github.com/miaocongliang/mygit
+ 
+ 
+四、代码冲突解决办法：
+    1、如果希望保留生产服务器上所做的改动,仅仅并入新配置项, 处理方法如下:
+    git stash
+		git pull
+		git stash pop
+		然后可以使用git diff -w +文件名 来确认代码自动合并的情况.
+		
+		反过来,如果希望用代码库中的文件完全覆盖本地工作版本. 方法如下:
+		git reset --hard
+		git pull
+		
+		其中git reset是针对版本,如果想针对文件回退本地修改,使用
+    git checkout HEAD file/to/restore  
+
+		
+    以上参考：http://blog.csdn.net/iefreer/article/details/7679631
+
+五、更新项目
+    git pull
+    
+    
+    
+
+五、git的分为以下几个文件区域：
+
 1、Workspace：工作区
 2、Index/Stage：暂存区
 3、Repository：仓库区（或本地仓库）
 4、Remote：远程仓库
    我们平常做修改、新增、删除操作都是针对工作区的，只用执行了git add 命令后才会把工作区的变动提交到暂存区；执行git commit 命令后，才会把暂存区的变动提交到版本库，
 执行命令git push后，才会把版本库的变动提交到远程仓库。因此代码提交需分三个步骤。
- 
+		
+		
+		
+		
+		
+		
+		
 
-git 代码提交步骤如下：
+五、git 代码提交步骤如下：
 1、 git status   //查看当前项目下所有文的状态，如果第一次，你会发现都红颜色的，因为它还没有交给git/github管理。
 
 2、 git diff //可以查询所修改的代码
